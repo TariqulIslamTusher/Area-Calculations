@@ -29,7 +29,7 @@ function makeTheTableData(serial, name, area){
       <td>${serial}</td>
       <td>${name}</td>
       <td id='area'>${area + 'cm'}<sup>2</sup></td>
-      <td id='id'><button class='btn btn-accent lowercase text-sm'>convert m<sup>2</sup></button></td>
+      <td id='id'><button class='btn-sm btn-accent lowercase text-sm'>convert m<sup>2</sup></button></td>
     `
     var button = tr.querySelector("#id").children[0]
     var tdArea = tr.querySelector("#area")
