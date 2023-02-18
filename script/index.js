@@ -1,7 +1,7 @@
 //=========================
 // Locate the blog page
 //====================
-document.getElementById('locate-blog').addEventListener('click', function(){
+document.getElementById('locate-blog').addEventListener('click', function () {
     window.location.href = './resources/blog.html';
 })
 
@@ -89,3 +89,26 @@ document.getElementById('ellipse-card-btn').addEventListener('click', function (
 document.getElementById('checked-btn3').addEventListener('click', function () {
     hideEditingDisplay('ellipse-input1', 'ellipse-input2', 'ellipse-a', 'ellipse-b', 'taking-ellipse-input')
 })
+
+
+
+
+
+//=========================================
+// Make Random Color on Cards with hover
+//============================================
+let cards = document.getElementsByClassName("card");
+for (let card of cards) {
+    card.addEventListener('mouseenter', function (){
+        card.style.backgroundColor = randomBgColor(300);
+        // card.style.color = randomBgColor(100);
+    })
+};
+
+for (let card of cards) {
+    card.addEventListener('mouseleave', function () {
+        card.style.backgroundColor = "white"
+        // card.style.color = "black"
+    })
+}
+

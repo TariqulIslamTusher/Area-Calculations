@@ -29,7 +29,7 @@ function makeTheTableData(serial, name, area){
       <td>${serial}</td>
       <td>${name}</td>
       <td id='cm'>${area + 'cm'}<sup>2</sup></td>
-      <td><button class='btn btn-accent lowercase'>convert to m<sup>2</sup></button></td>
+      <td id='appended-btn'><button class='btn btn-sm btn-accent lowercase text-sm'>convert m<sup>2</sup></button></td>
     `
     tbody.appendChild(tr)
 }
@@ -70,3 +70,13 @@ function hideEditingDisplay(inputId1, inputId2, placeId1, placeId2, displayId){
         makingDisplayNone(displayId)
     }
 }
+
+
+//---------------------------------------
+// Make random color on background 
+function randomBgColor(limitNumber){
+    const r = Math.floor(Math.random() * limitNumber);
+    const g = Math.floor(Math.random() * limitNumber);
+    const b = Math.floor(Math.random() * limitNumber);
+    return `rgb(${r},${g},${b})`
+  }

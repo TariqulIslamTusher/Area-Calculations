@@ -21,8 +21,8 @@
   </header>
 
   <main>
-    <section class="cardAndCart flex flex-col lg:flex-row mt-5 gap-3">
-      <article class="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[65%] gap-4 mx-auto">
+    <section class="cardAndCart flex flex-col lg:flex-row mt-5 gap-2">
+      <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[65%] gap-3 mx-auto">
         <!-- card 1 -->
         <div id="triangle" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
           <figure class="p-4 md:h-44">
@@ -32,9 +32,11 @@
             <h2 id="name1" class="card-title">Triangle</h2>
             <p class="mb-3">Area (A) = 0.5 x b x h </p>
             <div class="text-sm">
-              <input id="triangleInput1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="b">
+              <input id="triangleInput1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text"
+                placeholder="b">
               cm
-              <input id="triangleInput2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="h">
+              <input id="triangleInput2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text"
+                placeholder="h">
               cm
             </div>
             <button id='triangle-card-btn' class="w-full btn btn-primary mt-7">Calculate</button>
@@ -97,9 +99,11 @@
             <h2 id="name4" class="card-title">Rhombus</h2>
             <p class="mb-3">Area (A) = 0.5 x d1 x d2</p>
             <div class="text-sm">
-              <input id="rhombus-d1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d1">
+              <input id="rhombus-d1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text"
+                placeholder="d1">
               cm
-              <input id="rhombus-d2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d2"> cm
+              <input id="rhombus-d2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text"
+                placeholder="d2"> cm
             </div>
             <button id="rhombus-card-btn" class="w-full btn btn-primary mt-7">Calculate</button>
           </div>
@@ -155,20 +159,11 @@
 
       </article>
 
-      <article class="cart w-[30%] mx-auto">
+      <article class="cart w-full md:w-[32%] md:mx-auto md:scroll-x-auto">
         <h2 class="text-center font-bold text-3xl border-b-4 mb-6">Area Calculation</h2>
 
         <div>
-          <table class="table w-full text-center">
-            <!-- head -->
-            <!-- <thead>
-              <tr>
-                <th>Ser</th>
-                <th>Name</th>
-                <th>Area</th>
-                <th></th>
-              </tr> -->
-            </thead>
+          <table class="table w-full text-center mx-auto">
             <!-- table body -->
             <tbody id="tbody">
 
@@ -181,9 +176,6 @@
 
   <script src="script/utility.js"></script>
   <script src="script/index.js"></script>
-  <script>
-
-  </script>
 </body>
 
 </html>
