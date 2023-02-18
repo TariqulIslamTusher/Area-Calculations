@@ -15,7 +15,7 @@ document.getElementById('triangle-card-btn').addEventListener('click', function 
     const name = getInnerTextInString('name1');
     const heigth = getInnerValueById('triangleInput1')
     const base = getInnerValueById('triangleInput2')
-    const area = 0.5 + heigth + base
+    const area = 0.5 * heigth * base
     validationCheck(name, heigth, base, area)
 
 })

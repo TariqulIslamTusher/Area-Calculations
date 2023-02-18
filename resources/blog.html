@@ -11,9 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header
-        class="container mx-auto py-3 px-3 mt-3 flex flex-col md:flex-row text-center md:justify-between bg-[#108fd843] items-center">
+<body class="md:container mx-auto">
+    <header class="px-4 py-4 mt-1 flex flex-row  md:justify-between bg-[#108fd843] items-center">
         <div class="w-9/12 mb-2 md:mb-0 md:w-2/12 mx-auto md:ml-0">
             <h3 class="text-2xl"><span class="font-bold text-3xl">Interactive</span> Geometry Genius</h3>
         </div>
@@ -28,10 +27,10 @@
         <article class="container mx-auto mt-5">
             
             <div tabindex="0" class="mb-3 collapse collapse-arrow hover:bg-slate-200 border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-3xl font-bold">
+                <div class="collapse-title text-2xl font-bold">
                     What is DOM and What is the purpose of DOM?
                 </div>
-                <div class="collapse-content text-2xl font-normal text-justify">
+                <div class="collapse-content text-xl font-normal text-justify">
                     <p>DOM stands for Document Object Model. It is an interface for programming through which structure,
                         style and content can be access and manipulate of a web document. DOM can interact the web
                         document over HTML and CSS. It represents the whole web document as nodes and object. Generally
@@ -43,10 +42,10 @@
             </div>
 
             <div tabindex="0" class="mb-3 collapse collapse-arrow hover:bg-slate-200 border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-3xl font-bold">
+                <div class="collapse-title text-2xl font-bold">
                     How will you select HTML elements using DOM? Name the DOM methods.
                 </div>
-                <div class="collapse-content text-2xl font-normal">
+                <div class="collapse-content text-xl font-normal">
                     <article>
                         <h2>
                             The most common way to access a HTML element is to use 'id' of an element. <br>
@@ -56,21 +55,21 @@
                             There are five ways of selecting element using DOM are followings:
                         </h2>
                         <ol class="ml-7 text-lg">
-                            <li>getElementByTagName()</li>
-                            <li>getElementByClassName()</li>
-                            <li>getElementById()</li>
-                            <li>querySelector()</li>
-                            <li>querySelectorAll()</li>
+                            <li>1. getElementByTagName()</li>
+                            <li>2. getElementByClassName()</li>
+                            <li>3. getElementById()</li>
+                            <li>4. querySelector()</li>
+                            <li>5. querySelectorAll()</li>
                         </ol>
                     </article>
                 </div>
             </div>
 
             <div tabindex="0" class="mb-3 collapse collapse-arrow hover:bg-slate-200 border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-3xl font-bold">
+                <div class="collapse-title text-2xl font-bold">
                     What is event bubble?
                 </div>
-                <div class="collapse-content text-2xl font-normal">
+                <div class="collapse-content text-xl font-normal">
                     <p>Event bubbling is such a concepts that, when an event receives a command to the innermost target
                         element and that events bubble up <span>(or we can say is transmitted or propagated)</span> to
                         its parants untill the root element come through a DOM tree. <br> <br>
@@ -80,10 +79,10 @@
             </div>
             
             <div tabindex="0" class="mb-3 collapse collapse-arrow hover:bg-slate-200 border border-base-300 bg-base-100 rounded-box">
-                <div class="collapse-title text-3xl font-bold">
+                <div class="collapse-title text-2xl font-bold">
                     What is a callback function and why will you use it?
                 </div>
-                <div class="collapse-content text-2xl font-normal">
+                <div class="collapse-content text-xl font-normal">
                     <p>
                         When we need a pre-determined function executions after an another function's executions, then we can use a callback function. <br> <br>
                         Callback function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. However, callback function often use to continue code executions after an asynchonous operation has completed. <br>
