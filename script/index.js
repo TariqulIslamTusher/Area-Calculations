@@ -33,7 +33,7 @@ document.getElementById('ractangle-card-btn').addEventListener('click', function
 
     validationCheck(name, width, length, area)
 })
-
+getInnerTextInNumberById
 // ============================
 //parallelogram-card-btn event
 // ============================

@@ -28,9 +28,16 @@ function makeTheTableData(serial, name, area){
     tr.innerHTML = `
       <td>${serial}</td>
       <td>${name}</td>
-      <td id='cm'>${area + 'cm'}<sup>2</sup></td>
-      <td id='appended-btn'><button class='btn btn-sm btn-accent lowercase text-sm'>convert m<sup>2</sup></button></td>
+      <td id='area'>${area + 'cm'}<sup>2</sup></td>
+      <td id='id'><button class='btn btn-accent lowercase text-sm'>convert m<sup>2</sup></button></td>
     `
+    var button = tr.querySelector("#id").children[0]
+    var tdArea = tr.querySelector("#area")
+
+    button.addEventListener('click', function(){
+        tdArea.innerText = area/100 + " mtr";
+    })
+    
     tbody.appendChild(tr)
 }
 
