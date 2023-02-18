@@ -9,14 +9,15 @@
   <link rel="stylesheet" href="script/tailwind.config.js">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/ece5ff7ef5.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="container mx-auto">
   <header class="px-4 py-2 mt-3 flex flex-col md:flex-row text-center md:justify-between bg-[#108fd843] align-middle">
-    <div class="w-3/12 mx-auto">
-      <h3 class="text-xl"><span class="font-bold text-2xl">Interactive</span> Geometry Genius</h3>
+    <div class="w-6/12 mb-2 md:mb-0 md:w-3/12 mx-auto md:ml-0">
+      <h3 class="text-xl"><span class="font-bold text-2xl ">Interactive</span> Geometry Genius</h3>
     </div>
-    <button class="btn btn-primary w-2/12 mx-auto">Blog</button>
+    <button class="btn btn-primary w-2/12 mx-auto md:mr-0">Blog</button>
   </header>
 
   <main>
@@ -29,7 +30,7 @@
           </figure>
           <div class="card-body items-center text-center">
             <h2 id="name1" class="card-title">Triangle</h2>
-            <p class="mb-3">Area (A) = 0.5 x b x h</p>
+            <p class="mb-3">Area (A) = 0.5 x b x h </p>
             <div class="text-xl">
               <input id="triangleInput1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="b"> cm
               <input id="triangleInput2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="h"> cm
@@ -60,8 +61,15 @@
             <img src="images/parallelogram.png" alt="parallelogram" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name3" class="card-title">Parallelogram</h2>
+            <h2 id="name3" class="card-title">Parallelogram  <i id="perallelogram-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = b x h</p>
+<!-- 
+            <div id="taking-para-input" class="text-lg hidden">
+              b = <input id="para-input1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="b">
+              
+              h = <input id="para-input2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="h"><i class="fa-sharp fa-solid fa-octagon-check font-bold"></i>
+            </div>  -->
+
             <p class="mb-3">b = <span id="baseOfparallelogram">10</span> cm, h = <span id="heightOfparallelogram">12</span>cm</p>
             <button id="parallelogram-card-btn" class="w-full btn btn-primary">Calculate</button>
           </div>
@@ -73,9 +81,12 @@
             <img src="images/rhombus.png" alt="rhombus" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name4" class="card-title">Rhombus</h2>
+            <h2 id="name4" class="card-title">Rhombus  <i class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = 0.5 x d1 x d2</p>
-            <p class="mb-3">d1 = <span id="rhombus-d1">16</span> cm, d2 = <span id="rhombus-d2">08</span>cm</p>
+            <div class="text-xl">
+              <input id="rhombus-d1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d1">
+              cm 
+              <input id="rhombus-d2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d2"> cm</div>
             <button id="rhombus-card-btn" class="w-full btn btn-primary mt-7">Calculate</button>
           </div>
         </div>
@@ -86,7 +97,7 @@
             <img src="images/pentagon.png" alt="pentagon" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name5" class="card-title">Pentagon</h2>
+            <h2 id="name5" class="card-title">Pentagon  <i class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = 0.5 x p x b</p>
             <p class="mb-3">p = <span id="pentagon-p">6</span> cm, b = <span id="pentagon-b">10</span>cm</p>
             <button id="pentagon-card-btn" class="w-full btn btn-primary">Calculate</button>
@@ -133,7 +144,7 @@
   </main>
 
   <script>
-    
+
   </script>
   <script src="script/utility.js"></script>
   <script src="script/index.js"></script>
