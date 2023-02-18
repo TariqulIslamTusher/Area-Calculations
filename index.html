@@ -24,8 +24,8 @@
     <section class="cardAndCart flex flex-col lg:flex-row mt-5 gap-3">
       <article class="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[65%] gap-4 mx-auto">
         <!-- card 1 -->
-        <div id="triangle" class="card bg-base-100 shadow-xl px-6 py-5">
-          <figure class="p-4 md:h-48">
+        <div id="triangle" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
+          <figure class="p-4 md:h-44">
             <img src="images/triangle.png" alt="Triangle" />
           </figure>
           <div class="card-body items-center text-center">
@@ -40,8 +40,8 @@
         </div>
 
         <!-- card 2 -->
-        <div id="ractangle" class="card bg-base-100 shadow-xl px-6 py-5">
-          <figure class="p-4 md:h-48">
+        <div id="ractangle" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
+          <figure class="p-4 md:h-44">
             <img src="images/rectangle.png" alt="Ractangle" />
           </figure>
           <div class="card-body items-center text-center">
@@ -56,19 +56,19 @@
         </div>
 
         <!-- card 3 -->
-        <div id="parallelogram" class="card bg-base-100 shadow-xl px-6 py-5">
-          <figure class="p-4 md:h-48">
+        <div id="parallelogram" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
+          <figure class="p-4 md:h-44 items-center">
             <img src="images/parallelogram.png" alt="parallelogram" />
           </figure>
           <div class="card-body items-center text-center">
             <h2 id="name3" class="card-title">Parallelogram  <i id="perallelogram-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = b x h</p>
-<!-- 
-            <div id="taking-para-input" class="text-lg hidden">
-              b = <input id="para-input1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="b">
-              
-              h = <input id="para-input2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="h"><i class="fa-sharp fa-solid fa-octagon-check font-bold"></i>
-            </div>  -->
+
+            <div id="taking-para-input" class="text-lg text-center justify-around align-middle hidden">
+              b = <input id="para-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
+              h = <input id="para-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="h">
+              <i id="checked-btn1" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
+            </div> 
 
             <p class="mb-3">b = <span id="baseOfparallelogram">10</span> cm, h = <span id="heightOfparallelogram">12</span>cm</p>
             <button id="parallelogram-card-btn" class="w-full btn btn-primary">Calculate</button>
@@ -76,12 +76,12 @@
         </div>
 
         <!-- card 4 -->
-        <div id="rhombus" class="card bg-base-100 shadow-xl px-6 py-5">
-          <figure class="p-4 md:h-48">
+        <div id="rhombus" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
+          <figure class="p-4 md:h-44">
             <img src="images/rhombus.png" alt="rhombus" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name4" class="card-title">Rhombus  <i class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name4" class="card-title">Rhombus</h2>
             <p class="mb-3">Area (A) = 0.5 x d1 x d2</p>
             <div class="text-xl">
               <input id="rhombus-d1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d1">
@@ -92,26 +92,36 @@
         </div>
 
         <!-- card 5 -->
-        <div id="pentagon" class="card bg-base-100 shadow-xl px-6 py-5">
-          <figure class="p-4 md:h-48">
+        <div id="pentagon" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
+          <figure class="p-4 md:h-44">
             <img src="images/pentagon.png" alt="pentagon" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name5" class="card-title">Pentagon  <i class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name5" class="card-title">Pentagon  <i id="pentagon-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = 0.5 x p x b</p>
+            <div id="taking-penta-input" class="text-lg text-center justify-around align-middle hidden">
+               = <input id="penta-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
+              b = <input id="penta-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
+              <i id="checked-btn2" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
+            </div> 
             <p class="mb-3">p = <span id="pentagon-p">6</span> cm, b = <span id="pentagon-b">10</span>cm</p>
             <button id="pentagon-card-btn" class="w-full btn btn-primary">Calculate</button>
           </div>
         </div>
 
         <!-- card 6 -->
-        <div id="ellipse" class="card bg-base-100 shadow-xl px-6 py-5">
-          <figure class="p-4 md:h-48">
+        <div id="ellipse" class="card card-compact bg-base-100 shadow-xl px-2 py-5">
+          <figure class="p-4 md:h-44">
             <img src="images/ellipse.png" alt="ellipse" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name6" class="card-title">Ellipse</h2>
+            <h2 id="name6" class="card-title">Ellipse  <i id="ellipse-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = Πab</p>
+            <div id="taking-ellipse-input" class="text-lg text-center justify-around align-middle hidden">
+              a = <input id="ellipse-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
+              b = <input id="ellipse-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
+              <i id="checked-btn3" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
+           </div> 
             <p class="mb-3">a = <span id="ellipse-a">10</span> cm, b = <span id="ellipse-b">4</span>cm</p>
             <button id="ellipse-card-btn" class="w-full btn btn-primary">Calculate</button>
           </div>
@@ -143,11 +153,11 @@
     </section>
   </main>
 
+  <script src="script/utility.js"></script>
+  <script src="script/index.js"></script>
   <script>
 
   </script>
-  <script src="script/utility.js"></script>
-  <script src="script/index.js"></script>
 </body>
 
 </html>

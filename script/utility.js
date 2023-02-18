@@ -33,3 +33,29 @@ function makeTheTableData(serial, name, area){
     `
     tbody.appendChild(tr)
 }
+
+//----------------------------------------
+// validation check
+
+function validationCheck(nameInput, input1, input2, areaInput){
+    if (isNaN(input1) || input1 <= 0 || isNaN(input2) || input2 <= 0) {
+        return alert('Please enter a valid Number')
+    } else{
+        makeTheTableData(serial, nameInput, areaInput.toFixed(2))
+    }
+}
+
+//------------------------------------
+// making display block
+function makingDisplayBlock(inputId){
+    document.getElementById(inputId).style.display = 'block'
+}
+
+//------------------------------------
+// making display none
+function makingDisplayNone(inputId){
+    document.getElementById(inputId).style.display = 'none'
+}
+
+//---------------------------------------------
+// make input display with check button
