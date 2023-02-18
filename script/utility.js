@@ -58,4 +58,15 @@ function makingDisplayNone(inputId){
 }
 
 //---------------------------------------------
-// make input display with check button
+// hide editable input display with check button
+function hideEditingDisplay(inputId1, inputId2, placeId1, placeId2, displayId){
+    let input1 = getInnerValueById(inputId1)
+    let input2 = getInnerValueById(inputId2)
+    if (isNaN(input1) || input1<= 0 || isNaN(input2) || input2 <= 0) {
+        return alert('Please insert a valid number')
+    } else {
+        document.getElementById(placeId1).innerText = input1
+        document.getElementById(placeId2).innerText = input2
+        makingDisplayNone(displayId)
+    }
+}

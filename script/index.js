@@ -37,20 +37,8 @@ document.getElementById('parallelogram-card-btn').addEventListener('click', func
     const area = base * height;
     validationCheck(name, base, height, area)
 })
-document.getElementById('perallelogram-edit').addEventListener('click', function () {
-    makingDisplayBlock('taking-para-input')
-})
-
 document.getElementById('checked-btn1').addEventListener('click', function () {
-    const b = getInnerValueById('para-input1')
-    const h = getInnerValueById('para-input2')
-    if (isNaN(b) || b<= 0 || isNaN(h) || h <= 0) {
-        return alert('Cannt take the empty element')
-    } else {
-        document.getElementById('baseOfparallelogram').innerText = b
-        document.getElementById('heightOfparallelogram').innerText = h
-        makingDisplayNone('taking-para-input')
-    }
+    hideEditingDisplay('para-input1', 'para-input2', 'baseOfparallelogram', 'heightOfparallelogram', 'taking-para-input')
 })
 
 // ============================
@@ -74,20 +62,8 @@ document.getElementById('pentagon-card-btn').addEventListener('click', function 
     const area = 0.5 * p * b;
     validationCheck(name, p, b, area)
 })
-document.getElementById('pentagon-edit').addEventListener('click', function () {
-    makingDisplayBlock('taking-penta-input')
-})
-
 document.getElementById('checked-btn2').addEventListener('click', function () {
-    const b = getInnerValueById('penta-input1')
-    const h = getInnerValueById('penta-input2')
-    if (isNaN(b) || b<= 0 || isNaN(h) || h <= 0) {
-        return alert('Cannt take the empty element')
-    } else {
-        document.getElementById('pentagon-p').innerText = b
-        document.getElementById('pentagon-b').innerText = h
-        makingDisplayNone('taking-penta-input')
-    }
+    hideEditingDisplay('penta-input1', 'penta-input2', 'pentagon-p', 'pentagon-b', 'taking-penta-input')
 })
 
 //============================
@@ -102,19 +78,6 @@ document.getElementById('ellipse-card-btn').addEventListener('click', function (
     const area = Π * a * b;
     validationCheck(name, a, b, area)
 })
-document.getElementById('ellipse-edit').addEventListener('click', function () {
-    makingDisplayBlock('taking-ellipse-input')
-})
-
 document.getElementById('checked-btn3').addEventListener('click', function () {
-    
-    const store1 = getInnerValueById('ellipse-input1')
-    const store2 = getInnerValueById('ellipse-input2')
-    if (isNaN(store1) || store1<= 0 || isNaN(store2) || store2 <= 0) {
-        return alert('Please insert a valid number')
-    } else {
-        document.getElementById('ellipse-a').innerText = store1
-        document.getElementById('ellipse-b').innerText = store2
-        makingDisplayNone('taking-ellipse-input')
-    }
+    hideEditingDisplay('ellipse-input1', 'ellipse-input2', 'ellipse-a', 'ellipse-b', 'taking-ellipse-input')
 })

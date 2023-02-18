@@ -61,7 +61,7 @@
             <img src="images/parallelogram.png" alt="parallelogram" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name3" class="card-title">Parallelogram  <i id="perallelogram-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name3" class="card-title">Parallelogram  <i id="perallelogram-edit" onclick="makingDisplayBlock('taking-para-input')" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = b x h</p>
 
             <div id="taking-para-input" class="text-lg text-center justify-around align-middle hidden">
@@ -97,10 +97,10 @@
             <img src="images/pentagon.png" alt="pentagon" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name5" class="card-title">Pentagon  <i id="pentagon-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name5" class="card-title">Pentagon  <i id="pentagon-edit" onclick="makingDisplayBlock('taking-penta-input')" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = 0.5 x p x b</p>
             <div id="taking-penta-input" class="text-lg text-center justify-around align-middle hidden">
-               = <input id="penta-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
+              p = <input id="penta-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
               b = <input id="penta-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
               <i id="checked-btn2" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
             </div> 
@@ -115,7 +115,7 @@
             <img src="images/ellipse.png" alt="ellipse" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name6" class="card-title">Ellipse  <i id="ellipse-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name6" class="card-title">Ellipse  <i onclick="makingDisplayBlock('taking-ellipse-input')" id="ellipse-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = Πab</p>
             <div id="taking-ellipse-input" class="text-lg text-center justify-around align-middle hidden">
               a = <input id="ellipse-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
