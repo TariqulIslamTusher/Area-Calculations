@@ -1,3 +1,11 @@
+//=========================
+// Locate the blog page
+//====================
+document.getElementById('locate-blog').addEventListener('click', function(){
+    window.location.href = './resources/blog.html';
+})
+
+
 let serial = 0;
 //==========================
 // triangle card button event
@@ -57,8 +65,8 @@ document.getElementById('rhombus-card-btn').addEventListener('click', function (
 document.getElementById('pentagon-card-btn').addEventListener('click', function () {
     serial += 1;
     const name = getInnerTextInString('name5');
-    const p = getInnerTextInNumberById('pentagon-p')
-    const b = getInnerTextInNumberById('pentagon-b')
+    const p = getInnerTextInNumberById('pentagon-p');
+    const b = getInnerTextInNumberById('pentagon-b');
     const area = 0.5 * p * b;
     validationCheck(name, p, b, area)
 })
@@ -72,8 +80,8 @@ document.getElementById('checked-btn2').addEventListener('click', function () {
 document.getElementById('ellipse-card-btn').addEventListener('click', function () {
     serial += 1;
     const name = getInnerTextInString('name6');
-    const a = getInnerTextInNumberById('ellipse-a')
-    const b = getInnerTextInNumberById('ellipse-b')
+    const a = getInnerTextInNumberById('ellipse-a');
+    const b = getInnerTextInNumberById('ellipse-b');
     const Π = 3.1416;
     const area = Π * a * b;
     validationCheck(name, a, b, area)

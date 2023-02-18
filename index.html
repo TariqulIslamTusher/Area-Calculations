@@ -13,11 +13,11 @@
 </head>
 
 <body class="container mx-auto">
-  <header class="px-4 py-2 mt-3 flex flex-col md:flex-row text-center md:justify-between bg-[#108fd843] align-middle">
+  <header class="px-4 py-2 mt-3 flex flex-col md:flex-row  md:justify-between bg-[#108fd843] items-center">
     <div class="w-6/12 mb-2 md:mb-0 md:w-3/12 mx-auto md:ml-0">
-      <h3 class="text-xl"><span class="font-bold text-2xl ">Interactive</span> Geometry Genius</h3>
+      <h3 class="text-xl"><span class="font-bold text-3xl ">Interactive</span> Geometry Genius</h3>
     </div>
-    <button class="btn btn-primary w-2/12 mx-auto md:mr-0">Blog</button>
+    <button id="locate-blog" class="btn btn-primary w-2/12 mx-auto md:mr-0">Blog</button>
   </header>
 
   <main>
@@ -31,9 +31,11 @@
           <div class="card-body items-center text-center">
             <h2 id="name1" class="card-title">Triangle</h2>
             <p class="mb-3">Area (A) = 0.5 x b x h </p>
-            <div class="text-xl">
-              <input id="triangleInput1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="b"> cm
-              <input id="triangleInput2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="h"> cm
+            <div class="text-sm">
+              <input id="triangleInput1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="b">
+              cm
+              <input id="triangleInput2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="h">
+              cm
             </div>
             <button id='triangle-card-btn' class="w-full btn btn-primary mt-7">Calculate</button>
           </div>
@@ -47,10 +49,13 @@
           <div class="card-body items-center text-center">
             <h2 id="name2" class="card-title">Rectangle</h2>
             <p class="mb-3">Area (A) = W x L</p>
-            <div class="text-xl">
-              <input id="ractangleInput1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="w">
-              cm 
-              <input id="ractangleInput2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="l"> cm</div>
+            <div class="text-sm">
+              <input id="ractangleInput1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text"
+                placeholder="w">
+              cm
+              <input id="ractangleInput2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text"
+                placeholder="l"> cm
+            </div>
             <button id="ractangle-card-btn" class="w-full btn btn-primary mt-7">Calculate</button>
           </div>
         </div>
@@ -61,16 +66,24 @@
             <img src="images/parallelogram.png" alt="parallelogram" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name3" class="card-title">Parallelogram  <i id="perallelogram-edit" onclick="makingDisplayBlock('taking-para-input')" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name3" class="card-title">Parallelogram <i id="perallelogram-edit"
+                onclick="makingDisplayBlock('taking-para-input')" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = b x h</p>
 
-            <div id="taking-para-input" class="text-lg text-center justify-around align-middle hidden">
-              b = <input id="para-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
-              h = <input id="para-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="h">
-              <i id="checked-btn1" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
-            </div> 
+            <div id="taking-para-input" class="text-sm items-center text-center justify-around hidden">
+              <div class="flex flex-col md:flex-row items-center justify-center gap-2">
+                b = <input id="para-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text"
+                  placeholder="b">
+                h = <input id="para-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text"
+                  placeholder="h">
+                <i id="checked-btn1"
+                  class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
+              </div>
 
-            <p class="mb-3">b = <span id="baseOfparallelogram">10</span> cm, h = <span id="heightOfparallelogram">12</span>cm</p>
+            </div>
+
+            <p class="mb-3">b = <span id="baseOfparallelogram">10</span> cm, h = <span
+                id="heightOfparallelogram">12</span>cm</p>
             <button id="parallelogram-card-btn" class="w-full btn btn-primary">Calculate</button>
           </div>
         </div>
@@ -83,10 +96,11 @@
           <div class="card-body items-center text-center">
             <h2 id="name4" class="card-title">Rhombus</h2>
             <p class="mb-3">Area (A) = 0.5 x d1 x d2</p>
-            <div class="text-xl">
-              <input id="rhombus-d1" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d1">
-              cm 
-              <input id="rhombus-d2" class="inline bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d2"> cm</div>
+            <div class="text-sm">
+              <input id="rhombus-d1" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d1">
+              cm
+              <input id="rhombus-d2" class="inline text-center bg-slate-200 px-3 w-3/12 rounded-md" type="text" placeholder="d2"> cm
+            </div>
             <button id="rhombus-card-btn" class="w-full btn btn-primary mt-7">Calculate</button>
           </div>
         </div>
@@ -97,13 +111,19 @@
             <img src="images/pentagon.png" alt="pentagon" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name5" class="card-title">Pentagon  <i id="pentagon-edit" onclick="makingDisplayBlock('taking-penta-input')" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name5" class="card-title">Pentagon <i id="pentagon-edit"
+                onclick="makingDisplayBlock('taking-penta-input')" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = 0.5 x p x b</p>
-            <div id="taking-penta-input" class="text-lg text-center justify-around align-middle hidden">
-              p = <input id="penta-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
-              b = <input id="penta-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
-              <i id="checked-btn2" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
-            </div> 
+            <div id="taking-penta-input" class="text-sm text-center justify-around align-middle hidden">
+              <div class="flex flex-col md:flex-row items-center justify-center gap-2">
+                p = <input id="penta-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text"
+                  placeholder="p">
+                b = <input id="penta-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text"
+                  placeholder="b">
+                <i id="checked-btn2"
+                  class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
+              </div>
+            </div>
             <p class="mb-3">p = <span id="pentagon-p">6</span> cm, b = <span id="pentagon-b">10</span>cm</p>
             <button id="pentagon-card-btn" class="w-full btn btn-primary">Calculate</button>
           </div>
@@ -115,13 +135,19 @@
             <img src="images/ellipse.png" alt="ellipse" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 id="name6" class="card-title">Ellipse  <i onclick="makingDisplayBlock('taking-ellipse-input')" id="ellipse-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
+            <h2 id="name6" class="card-title">Ellipse <i onclick="makingDisplayBlock('taking-ellipse-input')"
+                id="ellipse-edit" class="fa-sharp fa-solid fa-pen-to-square"></i></h2>
             <p class="mb-3">Area (A) = Πab</p>
-            <div id="taking-ellipse-input" class="text-lg text-center justify-around align-middle hidden">
-              a = <input id="ellipse-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="p">
-              b = <input id="ellipse-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md" type="text" placeholder="b">
-              <i id="checked-btn3" class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
-           </div> 
+            <div id="taking-ellipse-input" class="text-sm text-center justify-around align-middle hidden">
+              <div class="flex flex-col md:flex-row items-center justify-center gap-2">
+                a = <input id="ellipse-input1" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md"
+                  type="text" placeholder="p">
+                b = <input id="ellipse-input2" class="bg-slate-200 inline px-2 text-center w-2/12 rounded-md"
+                  type="text" placeholder="b">
+                <i id="checked-btn3"
+                  class="fas fa-light fa-square-check text-3xl text-blue-500 hover:text-green-400 focus::text-green-800"></i>
+              </div>
+            </div>
             <p class="mb-3">a = <span id="ellipse-a">10</span> cm, b = <span id="ellipse-b">4</span>cm</p>
             <button id="ellipse-card-btn" class="w-full btn btn-primary">Calculate</button>
           </div>
