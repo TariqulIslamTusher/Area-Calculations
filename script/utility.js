@@ -1,75 +1,83 @@
 
 // -----------------------------------------
 // get input value by id
-function getInnerValueById(inputId){
+function getInnerValueById(inputId) {
     const inputValue = document.getElementById(inputId).value
     return parseFloat(inputValue);
 }
 
 //---------------------------------------------
 // get innerText of an element in string
-function getInnerTextInString(elementId){
+function getInnerTextInString(elementId) {
     const innerTextString = document.getElementById(elementId).innerText;
     return innerTextString;
 }
 
 // -----------------------------------------
 // get innerText of an element in number by id
-function getInnerTextInNumberById(elementId){
+function getInnerTextInNumberById(elementId) {
     const innerTextOfElement = document.getElementById(elementId).innerText;
     return parseFloat(innerTextOfElement);
 }
 
 // -----------------------------------------
 // create element and append as child
-function makeTheTableData(serial, name, area){
+function makeTheTableData(serial, name, area) {
     const tbody = document.getElementById('tbody')
     const tr = document.createElement('tr')
+    // tbody.classList.add('w-8/12')
     tr.innerHTML = `
       <td>${serial}</td>
       <td>${name}</td>
       <td id='area'>${area + 'cm'}<sup>2</sup></td>
       <td id='id'><button class='btn-sm btn-accent lowercase text-sm'>convert m<sup>2</sup></button></td>
+      <td id='close'><button class='btn-sm btn-primary lowercase text-sm'>close </button></td>
     `
-    var button = tr.querySelector("#id").children[0]
-    var tdArea = tr.querySelector("#area")
+    const button = tr.querySelector("#id").children[0]
 
-    button.addEventListener('click', function(){
-        tdArea.innerText = area/100 + " mtr";
+    const tdArea = tr.querySelector("#area")
+    var close = tr.querySelector('#close')
+    button.addEventListener('click', function () {
+        tdArea.innerText = area / 100 + " mtr";
     })
-    
+
     tbody.appendChild(tr)
+    close.addEventListener('click', function(event){
+        event.target.parentNode.parentNode.remove()
+        serial -= 1
+    })    
 }
+
 
 //----------------------------------------
 // validation check
 
-function validationCheck(nameInput, input1, input2, areaInput){
+function validationCheck(nameInput, input1, input2, areaInput) {
     if (isNaN(input1) || input1 <= 0 || isNaN(input2) || input2 <= 0) {
-        return alert('Please enter a valid Number')
-    } else{
+        return serial = serial - 1, alert('Please enter a valid Number');
+    } else {
         makeTheTableData(serial, nameInput, areaInput.toFixed(2))
     }
 }
 
 //------------------------------------
 // making display block
-function makingDisplayBlock(inputId){
+function makingDisplayBlock(inputId) {
     document.getElementById(inputId).style.display = 'block'
 }
 
 //------------------------------------
 // making display none
-function makingDisplayNone(inputId){
+function makingDisplayNone(inputId) {
     document.getElementById(inputId).style.display = 'none'
 }
 
 //---------------------------------------------
 // hide editable input display with check button
-function hideEditingDisplay(inputId1, inputId2, placeId1, placeId2, displayId){
+function hideEditingDisplay(inputId1, inputId2, placeId1, placeId2, displayId) {
     let input1 = getInnerValueById(inputId1)
     let input2 = getInnerValueById(inputId2)
-    if (isNaN(input1) || input1<= 0 || isNaN(input2) || input2 <= 0) {
+    if (isNaN(input1) || input1 <= 0 || isNaN(input2) || input2 <= 0) {
         return alert('Please insert a valid number')
     } else {
         document.getElementById(placeId1).innerText = input1
@@ -81,9 +89,9 @@ function hideEditingDisplay(inputId1, inputId2, placeId1, placeId2, displayId){
 
 //---------------------------------------
 // Make random color on background 
-function randomBgColor(limitNumber){
+function randomBgColor(limitNumber) {
     const r = Math.floor(Math.random() * limitNumber);
     const g = Math.floor(Math.random() * limitNumber);
     const b = Math.floor(Math.random() * limitNumber);
     return `rgb(${r},${g},${b})`
-  }
+}
